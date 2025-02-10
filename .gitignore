@@ -1,0 +1,9 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore model file if needed
+/backend/subtitle-generator/model.safetensors
+
+# System files
+.DS_Store
+Thumbs.db

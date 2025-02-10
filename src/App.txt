@@ -1,0 +1,22 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import StartPlayer from "./components/StartPlayer/StartPlayer";
+import UploadPage from "./components/UploadPage/UploadPage";
+import OptionsPage from "./components/OptionsPage/OptionsPage";
+import VideoPlayer from "./components/VideoPlayerPage/VideoPlayerPage";
+import "./App.css";
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<StartPlayer />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/options" element={<OptionsPage />} />
+        <Route path="/video-player" element={<VideoPlayer />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;

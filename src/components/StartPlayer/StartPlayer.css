@@ -1,0 +1,99 @@
+/* StartPlayer.css */
+/* StartPlayer.css */
+.app-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../../assets/new1.png"); /* Correct path */
+    overflow: hidden;
+  }
+  
+  .background-pattern {
+    display: none;
+  }
+  
+  .content-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  @media (min-width: 768px) {
+    .content-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .text-section {
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 4rem;
+    color: #6a1b9a;
+    font-family: 'Cursive', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+  }
+  
+  .video-section {
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Hide all controls except volume */
+  .video-player::-webkit-media-controls-play-button,
+  .video-player::-webkit-media-controls-timeline,
+  .video-player::-webkit-media-controls-current-time-display,
+  .video-player::-webkit-media-controls-time-remaining-display,
+  .video-player::-webkit-media-controls-seek-back-button,
+  .video-player::-webkit-media-controls-seek-forward-button,
+  .video-player::-webkit-media-controls-fullscreen-button,
+  .video-player::-webkit-media-controls-rewind-button,
+  .video-player::-webkit-media-controls-mute-button {
+    display: none !important;
+  }
+  
+  .enter-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: #6a1b9a;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enter-button:hover {
+    background-color: #f0f0f0;
+  }
+  

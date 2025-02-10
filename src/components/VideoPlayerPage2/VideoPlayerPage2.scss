@@ -1,0 +1,71 @@
+body {
+  background: url('../../assets/new1.png') no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VideoPlayerPage2 {
+  width: min(90vw, 90vh);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(10, 1, 1, 0.9);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+
+    .control-button {
+      background-color: #f5ecec;
+      border: none;
+      font-size: 1.5rem;
+      color: #000000;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .video-range {
+      width: 40%;
+      height: 5px;
+      background: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .volume-range {
+      width: 60px;
+      height: 5px;
+      background: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .time {
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}

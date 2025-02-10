@@ -1,0 +1,103 @@
+body {
+  background: url('../../assets/new1.png') no-repeat center center;
+  background-size: cover; /* Ensure the background image covers the entire page */
+  margin: 0; /* Remove any default margin */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VideoPlayerPage {
+  width: min(100vw, 100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+
+  video {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  &__subtitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    .control-button {
+      background-color: blue($color: #f5ecec);
+      border: none;
+      font-size: 1.5rem;
+      color: #000000;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: 10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10, 1, 1, 0.9);
+    border-radius: 10px;
+    padding: 0.5rem;
+    opacity: 1;
+
+    .control-button {
+      background-color: blue($color: #f5ecec);
+      border: none;
+      font-size: 1.5rem;
+      color: #000000;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .video-range {
+      width: 40%;
+      height: 5px;
+      background: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .volume-range {
+      width: 60px;
+      height: 5px;
+      background: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .time {
+      color: #ffffff;
+      font-size: 0.9rem;
+      min-width: max-content;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__controls {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0.5rem;
+    }
+  }
+}

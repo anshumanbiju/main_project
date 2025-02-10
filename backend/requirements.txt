@@ -1,0 +1,5 @@
+Flask
+whisper
+transformers
+moviepy
+werkzeug
